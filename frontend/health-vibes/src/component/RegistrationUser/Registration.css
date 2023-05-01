@@ -1,0 +1,128 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Form container styles */
+/* .sign-up {
+  width: 100vw;
+  background-color: #544e4e;
+  margin: 0 auto;
+  border-radius: 5px;
+} */
+/* Add spacing between the form elements */
+.sign-up form > * {
+  
+  margin-bottom: 1rem;
+}
+
+.sign-up form {
+  width: 60%;
+  margin: 10rem auto 0 auto;
+}
+
+/* Style the h3 headers */
+.sign-up form h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Header styles */
+#color {
+  width: 100%;
+  background-color: #3a3a3a;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  height: 10rem;
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sign-up h1 {
+  margin-top: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.sign-up h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Subheading styles */
+ h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Input field styles */
+#signup-email,
+#username,
+#signup-password,
+#confirm-password,
+#country,
+#city,
+#interest,
+#emergencyContact,
+.sign-up select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Checkbox styles */
+.sign-up input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Button styles */
+.register-btn-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.register-btn {
+  background-color: rgb(72, 141, 141);
+  color: #000;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  padding: 10px;
+  width: 20rem;
+}
+
+.register-btn:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Error message styles */
+.error {
+  color: #ff0000;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#dob {
+  width: 25.4%;
+  height: 2rem;
+}
+
+.terms {
+  display: flex;
+}

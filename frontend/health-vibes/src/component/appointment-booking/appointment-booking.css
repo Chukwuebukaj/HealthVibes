@@ -1,0 +1,183 @@
+/* #appointment-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+#appointment-page body {
+  background-color: #212121;
+  color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 100px;
+  display: flow-root;
+}
+
+#appointment-page body {
+  background-color: #212121;
+  color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 100px;
+  display: flow-root;
+}
+
+.appointment h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.appointment {
+  background-color: #212121;
+  color: #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  display: flow-root;
+}
+
+.appointment h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.appointment p {
+  margin-bottom: 10px;
+}
+
+.appointment {
+  background-color: #212121;
+  color: #ccc;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  padding: 4rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid red;
+}
+
+/* Form styles */
+
+.appointment-form {
+  max-width: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 50%;
+  color: #ccc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-radius: 4px;
+  color: #f2f2f2;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  background-color: #363636;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.form-group input[type="submit"],
+.form-group button,
+.my-button {
+  background-color: rgb(72, 141, 141);
+  border: none;
+  border-radius: 4px;
+  color: #f2f2f2;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-group input[type="submit"]:hover,
+.my-button:hover {
+  background-color: #ccc;
+  color: #363636;
+}
+
+/* .my-button {
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #489769;
+} */
+
+/* .my-button:hover {
+  background-color: #582ecc;
+  color: #fff;
+} */
+/* Modify the appearance of the dropdown */
+.appointment select {
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  color: #ccc;
+  width: 100%;
+  width: 100%;
+  background-color: #363636;
+}
+
+/* Change the appearance of the dropdown when it's in focus */
+.appointment select:focus {
+  outline: none;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* Change the appearance of the dropdown when an option is hovered over */
+.appointment select:hover option {
+  background-color: #f2f2f2;
+}
+
+/* Change the appearance of the selected option */
+.appointment select option:checked {
+  background-color: #0066cc;
+  color: #fff;
+}

@@ -1,0 +1,58 @@
+#contact-us {
+  background: url("../../images/galih-putro-VNC3_rvmiv8-unsplash.jpg") no-repeat
+    fixed center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem 0;
+  width: 100vw;
+}
+
+#contact-us form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  color: rgb(72, 141, 141);
+  border-radius: 1rem;
+  opacity: 0.9;
+  padding: 1rem 0;
+}
+#contact-us form input,
+#contact-us form textarea {
+  width: 70%;
+  background-color: rgb(72, 141, 141);
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem;
+  color: #000;
+  /* font-size: 1.2rem; */
+  font-family: "Poppins", sans-serif;
+}
+
+#contact-us form input {
+  height: 1rem;
+}
+
+.submit-btn {
+  width: 20%;
+  background-color: rgb(72, 141, 141);
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 1rem 0;
+}
+
+#contact-us input:focus,
+#contact-us textarea:focus {
+  outline: none;
+}
+
+#contact-us label {
+  width: 70%;
+}

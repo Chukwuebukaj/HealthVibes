@@ -1,0 +1,25 @@
+.professional-details {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .professional-details h1 {
+    margin-bottom: 10px;
+  }
+  
+  .professional-details-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .professional-details-row label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .professional-details-row span {
+    flex: 1;
+  }

@@ -1,0 +1,77 @@
+footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(72, 141, 141);
+  background-color: rgb(3, 29, 29);
+}
+
+footer nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.icon:hover {
+  color: #fff;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
+.services h1 {
+  margin: 0;
+}
+.services a {
+  margin-top: 0.5rem;
+}
+
+.services a,
+.links a {
+  color: rgb(72, 141, 141);
+  text-decoration: none;
+  padding-left: 0.5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  margin-top: 1rem;
+}
+
+.links a:hover,
+.services a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.social-media-links a {
+  color: rgb(72, 141, 141);
+  text-decoration: none;
+}

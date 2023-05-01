@@ -1,0 +1,18 @@
+.failed {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heart {
+  font-size: 6rem;
+  color: darkred;
+  margin: 10rem 0 -10rem 0;
+}
+
+.failed > p {
+  font-size: 2rem;
+}

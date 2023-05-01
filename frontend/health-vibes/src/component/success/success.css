@@ -1,0 +1,11 @@
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.success-img {
+  margin-top: 6rem;
+}

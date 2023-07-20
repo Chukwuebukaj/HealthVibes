@@ -4,6 +4,8 @@ import Link from "../link/link.component";
 import axios from "axios";
 import { useState } from "react";
 import "./login.css";
+import { toast, ToastContainer } from "react-toastify";
+import { displayError } from "../ToastErrorDisplay";
 
 interface FormValues {
   email: string;
@@ -15,7 +17,6 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const [error, setError] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement> | any) => {
     const { name, value } = event.target;
@@ -34,20 +35,27 @@ const Login = () => {
         formValues
       );
       if (userResponse.data.message === "User logged in Successfully") {
-        window.location.href = "/userdashboard";
+        setTimeout(() => {
+          window.location.href = "/userdashboard";
+        }, 2000);
         localStorage.setItem("email", JSON.stringify(formValues.email));
       }
       if (userResponse.data.message === "Professional logged in Successfully") {
-        window.location.href = "/professionaldashboard";
+        setTimeout(() => {
+          window.location.href = "/professionaldashboard";
+        }, 2000);
         localStorage.setItem("email", JSON.stringify(formValues.email));
       }
       if (userResponse.data.message === "Admin logged in Successfully") {
-        window.location.href = "/admindashboard";
+        setTimeout(() => {
+          window.location.href = "/admindashboard";
+        }, 2000);
         localStorage.setItem("email", JSON.stringify(formValues.email));
       }
+      toast.success(userResponse.data.message);
     } catch (error) {
       console.error(error);
-      setError("Invalid email/password");
+      displayError(error);
     }
   };
 
@@ -87,8 +95,8 @@ const Login = () => {
           btnText="LOGIN"
           id="login-btn"
         />
-        {error && <p className="error">{error}</p>}
       </form>
+      <ToastContainer />
     </div>
   );
 };

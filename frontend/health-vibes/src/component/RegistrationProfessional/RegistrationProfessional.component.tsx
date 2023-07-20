@@ -3,6 +3,8 @@ import axios from "axios";
 import "./RegistrationProfessional.css";
 import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface UserValues {
   name: string;
@@ -69,8 +71,11 @@ const RegistrationProfessional = (): JSX.Element => {
           "professionalData",
           JSON.stringify(response.data)
         );
-        navigate("/login");
-        window.location.reload();
+        toast.success(response.data.message);
+        setTimeout(() => {
+          navigate("/login");
+          window.location.reload();
+        }, 2000);
       }
     } catch (err) {
       console.log(err);
@@ -188,6 +193,7 @@ const RegistrationProfessional = (): JSX.Element => {
         </div>
         <button>REGISTER</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

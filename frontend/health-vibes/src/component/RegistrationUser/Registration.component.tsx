@@ -4,10 +4,15 @@ import { countries } from "countries-list";
 import InputField from "../input-field/input.component";
 import Button from "../button/button.component";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { displayError } from "../ToastErrorDisplay";
 
 const countryOptions = Object.values(countries).map((country) => country.name);
 
 const RegistrationUser = () => {
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
     username: "",
     email: "",
@@ -29,8 +34,15 @@ const RegistrationUser = () => {
         formValues
       );
       console.log(response);
-      window.location.href = "/login";
+      if (response.data.message === "User created successfully") {
+        toast.success(response.data.message);
+        setTimeout(() => {
+          navigate("/login");
+          window.location.reload();
+        }, 2000);
+      }
     } catch (error) {
+      displayError(error);
       console.error("Something went wrong, try again:", error);
     }
   };
@@ -56,17 +68,6 @@ const RegistrationUser = () => {
           </p>
           <h3>Account Details</h3>
           <div>
-            <label htmlFor="email">Email Address (required)</label>
-            <InputField
-              type="email"
-              id="signup-email"
-              name="email"
-              value={formValues.email}
-              onChange={handleChange}
-            />
-            <p>Valid email is required for membership.</p>
-          </div>
-          <div>
             <label htmlFor="Name">Name (required)</label>
             <br />
             <InputField
@@ -76,6 +77,18 @@ const RegistrationUser = () => {
               value={formValues.username}
               onChange={handleChange}
             />
+          </div>
+
+          <div>
+            <label htmlFor="email">Email Address (required)</label>
+            <InputField
+              type="email"
+              id="signup-email"
+              name="email"
+              value={formValues.email}
+              onChange={handleChange}
+            />
+            <p>Valid email is required for membership.</p>
           </div>
           <div>
             <label htmlFor="password">Choose a Password (required)</label>
@@ -193,6 +206,7 @@ const RegistrationUser = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </>
   );
 };

@@ -70,8 +70,9 @@ export const RegisterUser = async (req: Request, res: Response) => {
       //   return res.redirect("/login");
       return res.status(200).json({ message: "User created successfully" });
     }
-    return res.render("RegisterUser", { error: "Email already exists" });
+    return res.status(400).json({ error: "Email already exists" });
   } catch (err) {
+    res.status(500).json(err);
     console.error(err);
   }
 };
@@ -164,10 +165,8 @@ export const loginUser = async (req: Request, res: Response) => {
     res.status(400).json({ error: "Invalid email/password" });
   } catch (error) {
     console.error(error);
-    return res.json({
-      status: 500,
-      Error: "Internal server error",
-      success: false,
+    return res.status(500).json({
+      error,
     });
   }
 };
